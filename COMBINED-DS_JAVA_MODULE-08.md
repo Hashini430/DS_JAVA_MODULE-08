@@ -1,45 +1,37 @@
-# DS_JAVA_MODULE-08 — Combined File
+# DS_JAVA_MODULE-08 — Combined PDF Report
 
-This document combines all exercise files in the repository into a single PDF-friendly report.
+This document combines all five exercise files in the repository into one PDF-ready Markdown file.
 
 ---
 
-# Ex11 Convert HashSet to ArrayList in Java
-## AIM:
-To convert a collection of distinct integers stored in a HashSet into an ArrayList and display its contents.
+# Ex11 — Convert HashSet to ArrayList in Java
+
+## Aim
+To convert a collection of distinct integers stored in a `HashSet` into an `ArrayList` and display its contents.
 
 ## Algorithm
 1. Start the program.
-2. Create a HashSet to store a collection of distinct integers.
-3. Add a few integers to the HashSet.
-4. Create an ArrayList and initialize it with the elements of the HashSet.
-5. Display the elements of both HashSet and ArrayList.
-6. End the program.
+2. Create a `HashSet` to store distinct integers.
+3. Add integers to the `HashSet`.
+4. Create an `ArrayList` initialized with the elements of the `HashSet`.
+5. Display the `ArrayList` contents.
 
-## Program:
+## Program
 ```java
-/*
-Program to To convert a collection of distinct integers stored in a HashSet into an ArrayList and display its contents.
-Developed by: Abinaya A
-RegisterNumber: 212224230004
-*/
-
 import java.util.*;
 
 public class HashSetToArrayList {
-
     public static ArrayList<Integer> convertToArrayList(HashSet<Integer> set) {
-        ArrayList<Integer> list = new ArrayList<>(set);
-        return list;
+        return new ArrayList<>(set);
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         HashSet<Integer> set = new HashSet<>();
+
         for (int i = 0; i < n; i++) {
-            int num = sc.nextInt();
-            set.add(num);
+            set.add(sc.nextInt());
         }
 
         ArrayList<Integer> list = convertToArrayList(set);
@@ -52,51 +44,43 @@ public class HashSetToArrayList {
 }
 ```
 
-## Output:
+## Output
 <img width="524" height="550" alt="image" src="https://github.com/user-attachments/assets/0a328278-4dfa-401b-b137-abc9458d737d" />
 
-## Result:
-The program successfully converts a collection of distinct integers stored in a HashSet into an ArrayList.
+## Result
+The program successfully converts a collection of distinct integers stored in a `HashSet` into an `ArrayList`.
 
 ---
 
-# Ex12 Add Elements from an Array into a TreeSet
-## AIM:
-To write a Java program that adds elements from an array into a TreeSet and displays the elements in sorted order.
+# Ex12 — Add Elements from an Array into a TreeSet
+
+## Aim
+To write a Java program that adds elements from an array into a `TreeSet` and displays the elements in sorted order.
 
 ## Algorithm
-1. Create an array containing a few integer elements.
-2. Create a TreeSet to store elements in sorted order.
-3. Use a loop to add each element of the array into the TreeSet.
-4. Display the elements of the TreeSet.
-5. Stop the program.
+1. Create an integer array.
+2. Create a `TreeSet` to store elements in sorted order.
+3. Add each array element to the `TreeSet`.
+4. Display the sorted elements.
 
-## Program:
+## Program
 ```java
-/*
-Program that adds elements from an array into a TreeSet and displays the elements in sorted order.
-Developed by: Abinaya A
-RegisterNumber: 212224230004
-*/
-
 import java.util.*;
 
 public class ArrayToTreeSet {
-
     public static TreeSet<Integer> convertArrayToTreeSet(int[] arr) {
         List<Integer> list = new ArrayList<>();
-        for(int x : arr){
+        for (int x : arr) {
             list.add(x);
         }
-
-        TreeSet<Integer> treeSet = new TreeSet<>(list);
-        return treeSet;
+        return new TreeSet<>(list);
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
+
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
@@ -106,43 +90,36 @@ public class ArrayToTreeSet {
         for (int num : treeSet) {
             System.out.println(num);
         }
-
         sc.close();
     }
 }
 ```
 
-## Output:
+## Output
 <img width="624" height="436" alt="image" src="https://github.com/user-attachments/assets/869f72c0-2cfe-4e38-a11e-669968f0a796" />
 
-## Result:
-The program successfully adds elements from an array into a TreeSet.
+## Result
+The program successfully adds elements from an array into a `TreeSet`.
 
 ---
 
-# Ex13 Fill the First 10 Elements of an Array with a Constant using Arrays.fill()
-## AIM:
-To write a Java program that fills the first 10 elements of an array with a constant value using the Arrays.fill() method.
+# Ex13 — Fill the First 10 Elements of an Array with a Constant
+
+## Aim
+To write a Java program that fills an array with a constant value using the `Arrays.fill()` method.
 
 ## Algorithm
 1. Start the program.
-2. Create an integer array of a specified size (for example, 15 elements).
-3. Use the Arrays.fill() method to fill the first 10 elements of the array with a constant value.
-4. Display the elements of the array after filling.
-5. Stop the program.
+2. Read a constant value.
+3. Create an array of size 10.
+4. Fill the array using `Arrays.fill()`.
+5. Display the array elements.
 
-## Program:
+## Program
 ```java
-/*
-Program to FILL the first 10 elements of an array with a constant value using the Arrays.fill() method.
-Developed by: Abinaya A
-RegisterNumber: 212224230004
-*/
-
 import java.util.*;
 
 public class FillArrayUsingArraysFill {
-
     public static int[] fillArray(int size, int value) {
         int[] arr = new int[size];
         Arrays.fill(arr, value);
@@ -153,6 +130,7 @@ public class FillArrayUsingArraysFill {
         Scanner sc = new Scanner(System.in);
         int value = sc.nextInt();
         int[] arr = fillArray(10, value);
+
         System.out.println("Array elements:");
         for (int num : arr) {
             System.out.print(num + " ");
@@ -162,59 +140,49 @@ public class FillArrayUsingArraysFill {
 }
 ```
 
-## Output:
+## Output
 <img width="706" height="176" alt="image" src="https://github.com/user-attachments/assets/3b0bedfe-2c88-4b2f-840e-e2733f1f817d" />
 
-## Result:
-The program successfully fills the first 10 elements of the array with the constant value 5 using the Arrays.fill() method.
+## Result
+The program successfully fills the first 10 elements of the array with a constant value.
 
 ---
 
-# Ex14 Tracking the First Unique Number in a Stream using LinkedHashMap
-## AIM:
-To implement a program that tracks the first unique (non-repeating) number in a stream of integers using a LinkedHashMap.
+# Ex14 — Track the First Unique Number in a Stream
+
+## Aim
+To track the first unique, non-repeating number in a stream of integers using a `LinkedHashMap`.
 
 ## Algorithm
-1. Start the program.
-2. Create a LinkedHashMap to store integers as keys and their frequency (count) as values.
-3. Read or define a stream of integers (array of numbers).
-4. For each integer in the stream:
-   - If the number is not already in the map, insert it with count = 1.
-   - If it exists, increment its count by 1.
-5. After processing each element, find the first number in the LinkedHashMap with count = 1.
-6. Display the current stream and the first unique number.
+1. Create a `LinkedHashMap` to store integers and their frequencies.
+2. Read the stream of integers.
+3. Update the frequency of each number.
+4. Search the map in insertion order for the first number with frequency 1.
+5. Display the first unique number or report that none exists.
 
-## Program:
+## Program
 ```java
-/*
-Program to tracks the first unique (non-repeating) number in a stream of integers using a LinkedHashMap.
-Developed by: Abinaya A
-RegisterNumber: 212224230004
-*/
-
 import java.util.*;
 
 public class FirstUniqueNumberStream {
-
     public static void processStream(int n, Scanner sc) {
         LinkedHashMap<Integer, Integer> freqMap = new LinkedHashMap<>();
-        for(int i=0; i<n; i++){
+
+        for (int i = 0; i < n; i++) {
             int current = sc.nextInt();
+            freqMap.put(current, freqMap.getOrDefault(current, 0) + 1);
 
-            freqMap.put(current, freqMap.getOrDefault(current, 0)+1);
-
-            int fUniq = -1;
-
-            for(Map.Entry<Integer, Integer> entry : freqMap.entrySet()){
-                if(entry.getValue() == 1){
-                    fUniq = entry.getKey();
+            int firstUnique = -1;
+            for (Map.Entry<Integer, Integer> entry : freqMap.entrySet()) {
+                if (entry.getValue() == 1) {
+                    firstUnique = entry.getKey();
                     break;
                 }
             }
 
-            if(fUniq != -1){
-                System.out.println("First unique number: "+fUniq);
-            }else{
+            if (firstUnique != -1) {
+                System.out.println("First unique number: " + firstUnique);
+            } else {
                 System.out.println("No unique number");
             }
         }
@@ -229,42 +197,36 @@ public class FirstUniqueNumberStream {
 }
 ```
 
-## Output:
+## Output
 <img width="686" height="507" alt="image" src="https://github.com/user-attachments/assets/c8c28d2e-327d-4303-b3c5-80c1eeec6735" />
 
-## Result:
-The program successfully tracks and returns the first unique number at any point in the integer stream using a LinkedHashMap.
+## Result
+The program successfully tracks and returns the first unique number at each point in the integer stream.
 
 ---
 
-# Ex15 Value Existence Check in a TreeMap
-## AIM:
-To write a Java program that checks whether a given value exists in a TreeMap.
+# Ex15 — Value Existence Check in a TreeMap
+
+## Aim
+To write a Java program that checks whether a given value exists in a `TreeMap`.
 
 ## Algorithm
-1. Create a TreeMap to store key–value pairs.
-2. Insert some sample key–value pairs into the TreeMap.
-3. Display the contents of the TreeMap.
-4. Use the containsValue() method to check whether a specific value exists in the map.
-5. Display the result based on the check.
+1. Create a `TreeMap` to store key-value pairs.
+2. Read and insert the entries.
+3. Read the value to search for.
+4. Use `containsValue()` to check whether the value exists.
+5. Display the result.
 
-## Program:
+## Program
 ```java
-/*
-Program to checks whether a given value exists in a TreeMap.
-Developed by: Abinaya A
-RegisterNumber: 212224230004
-*/
-
 import java.util.*;
 
 public class TreeMapValueExistenceCheck {
-
     public static void checkValue(TreeMap<Integer, String> map, String searchValue) {
-        if(map.containsValue(searchValue)){
-            System.out.println("Value \""+searchValue+"\" exists in the TreeMap.");
-        }else{
-            System.out.println("Value \""+searchValue+"\" does not exist in the TreeMap.");
+        if (map.containsValue(searchValue)) {
+            System.out.println("Value \"" + searchValue + "\" exists in the TreeMap.");
+        } else {
+            System.out.println("Value \"" + searchValue + "\" does not exist in the TreeMap.");
         }
     }
 
@@ -273,28 +235,28 @@ public class TreeMapValueExistenceCheck {
         TreeMap<Integer, String> map = new TreeMap<>();
 
         int n = sc.nextInt();
-
         for (int i = 0; i < n; i++) {
             int key = sc.nextInt();
             sc.nextLine();
             String value = sc.nextLine();
             map.put(key, value);
         }
-        String searchValue = sc.nextLine();
 
+        String searchValue = sc.nextLine();
         checkValue(map, searchValue);
         sc.close();
     }
 }
 ```
 
-## Output:
+## Output
 <img width="972" height="668" alt="image" src="https://github.com/user-attachments/assets/4f28964f-e8ad-4737-ac84-18a702035340" />
 
-## Result:
-Thus, the program successfully checks whether a specified value exists in a TreeMap using the containsValue() method.
+## Result
+The program successfully checks whether a specified value exists in a `TreeMap` using `containsValue()`.
 
 ---
 
 # Conclusion
-This repository contains exercises on HashSet conversion, TreeSet sorting, array filling, unique stream tracking, and TreeMap value checking. The combined report is ready for PDF conversion.
+
+This combined document covers Java collection operations using `HashSet`, `ArrayList`, `TreeSet`, `Arrays.fill()`, `LinkedHashMap`, and `TreeMap`. It is ready to open in a Markdown viewer and export as a PDF.
